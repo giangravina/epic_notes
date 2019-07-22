@@ -2,9 +2,27 @@
 <html>
 <head>
 	<title><%= blocks.title %></title>
+<<<<<<< Updated upstream
 	<link rel = "stylesheet" href = "/stylesheets/style.css">
 </head>
 <body>
 	<%- body -%>
+=======
+	<link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+	<%- partial('partials/navbar') -%>
+	<% if(banners.truthSeeker){ %>
+	<div>Welcome to the 8-ball, Truth Seeker!</div>
+	<% }  else if(banners.quizmaster){ %>
+	<div>Welcome to the 8-ball, Quiz Master!</div>
+	<% } %>
+	<% if(typeof currentUser !== 'undefined' && currentUser !== null) { %>
+	<p>Logged in as: <%= currentUser.username %></p>
+	<% } %>
+	<section class="container">
+		<%- body -%>
+	</section>
+>>>>>>> Stashed changes
 </body>
 </html>
