@@ -38,28 +38,38 @@
 
     </div>
   </div>
+<!-- front end: executes
+   get and post
+   $.get('url', callback( ) ) :makes backend router listen for the frontend
+   $.post('url', data, callback( ) )
 
-  <div id="tester">
-    
-  </div>
+ backend: listen for command request
+   router.get('/route', callback( ) )
+   router.post('url', callback( ) ) -->
+  <script
+  src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script type="text/javascript">
-    var 
-    z.addEventListener('click', function()){
-      req.session.destroy(function(err) {
-    
-})
-    }
-  </script>
-  <script type="text/javascript">
-    var y = document.getElementById("save");
-    //var x = document.getElementById("text");
-    var x = 100;
-    //document.getElementById("text").value();
-    y.addEventListener('click', function (){
-      //$('#text').html('#text');
-      $("tester").html(x);
+    $("#save").click(function save(){
+      $.get('/Notes', function(req, res, next){
+        console.log($("#exampleFormControlTextarea1").val());
 
-      //console.log(x);
+      });
     });
 
+    $.post('/Notes', function (req, res, next) {
+      ''
+    })
+    // var data = {
+    //    note: $("#exampleFormControlTextarea1").val()
+    //  };
+    // $.post("/route", data, function(){
+
+    //  })
+
+    // $("#save").click(function save(){
+    //   var n = $.get("#exampleFormControlTextarea1", function(n){
+    //     //console.log($("#exampleFormControlTextarea1").val());
+    //     alert($("#exampleFormControlTextarea1").val());
+    //   })
+    // });
   </script>
