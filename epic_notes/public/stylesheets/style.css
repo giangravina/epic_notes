@@ -1,14 +1,45 @@
 body {
   padding: 50px;
+<<<<<<< HEAD
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #A2DE80;
   text-align:center;
+=======
+  font: 14px "Nunito", Helvetica, Arial, sans-serif;
+>>>>>>> 25564bf136796b813615bfaadfd0a285fcad81db
 
 }
+
+/*#text {
+	display:inline-block;
+
+}*/
 
 a {
   color: #00B7FF;
 }
 
+<<<<<<< HEAD
 
 
+=======
+.zeb {
+	margin-top: 40px;
+	/*display: inline-block;*/
+	/*padding: 0px 10px 0px 0px;*/
+}
+
+#del{
+	float: right;
+}
+#save{
+	float: right;
+}
+nav ul li{
+	list-style: none;
+	display: inline;
+	font-size: 20px;
+	float: right;
+	padding: 0px 10px;
+}
+>>>>>>> 25564bf136796b813615bfaadfd0a285fcad81db

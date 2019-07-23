@@ -1,24 +1,65 @@
-<%layout('/layout') %>
+<% layout('/layout') %>
 <% block('title', 'Notes') %>
+<!-- <%- partial('partials/navbar') -%>  -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5">
+              <h1><%= title %></h1>
+              <p>View and Edit Notes</p>
+      </div>        
+    </div>          
+  </div>   
+  <div class="container">
+    <div class="row">
+       <div class="col-sm-3">
+         	<div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active">
+              Music Dreams
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">To-Do List</a>
+            <a href="#" class="list-group-item list-group-item-action">Homework</a>
+            <a href="#" class="list-group-item list-group-item-action">Groceries</a>
+            <a href="#" class="list-group-item list-group-item-action" >Game cheats</a>
+          </div>
+          <div class="zeb">
+            <button type="button" class="btn btn-primary" id="addNew">Add New</button>
+            <button type="button" class="btn btn-primary" id="del">Delete</button>
+          </div>
+        </div>
 
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-   
-   <div class="col-sm-3">
-   	<div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action active">
-    Cras justo odio
-  </a>
-  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-  <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-  <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-  <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Vestibulum at eros</a>
-</div>
-</div>
+      <div class="col-sm-7">
+      	  <div class="form-group" id = "text">
+          <!-- <label for="exampleFormControlTextarea1">Example textarea</label> -->
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="8">One day I will get a guitar that looks like a skull.
+            Then I will play at the giant theatre at the house.</textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="save">Save Edits</button>
+      </div>
 
-<div class="col-sm-9">
-	  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
   </div>
-</div>
+
+  <div id="tester">
+    
+  </div>
+  <script type="text/javascript">
+    var 
+    z.addEventListener('click', function()){
+      req.session.destroy(function(err) {
+    
+})
+    }
+  </script>
+  <script type="text/javascript">
+    var y = document.getElementById("save");
+    //var x = document.getElementById("text");
+    var x = 100;
+    //document.getElementById("text").value();
+    y.addEventListener('click', function (){
+      //$('#text').html('#text');
+      $("tester").html(x);
+
+      //console.log(x);
+    });
+
+  </script>
