@@ -24,5 +24,6 @@
 		<%- body -%>
 	</section>
 >>>>>>> Stashed changes
+	<%- partial('partials/footer') -%>
 </body>
 </html>
