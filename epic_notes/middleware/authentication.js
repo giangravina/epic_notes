@@ -1,6 +1,6 @@
 module.exports = function (request, response, next) {
   // Disable authentication checking on /login.
-  if (request.path === '/login') {
+  if (request.path === '/login' || request.path === '/') {
     return next(); // next() alone doesn't end the function, we must return.
   }
 
