@@ -1,15 +1,27 @@
 body {
-  padding: 50px;
 <<<<<<< HEAD
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #A2DE80;
-  text-align;
+  background-color: #7ED957;
 =======
   font: 14px "Nunito", Helvetica, Arial, sans-serif;
 >>>>>>> 25564bf136796b813615bfaadfd0a285fcad81db
 
 }
 
+.heading {
+	text-align: center;
+}
+#logo {
+	display: block;
+	margin-left:auto;
+	margin-right: auto;
+}
+
+.container-fluid {
+	background-color: #05386B;
+	color: #EDF5E1;
+	padding: 100px;
+}
 /*#text {
 	display:inline-block;
 
