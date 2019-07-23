@@ -8,27 +8,42 @@ body {
 
 }
 
-.heading {
+.heading{
 	text-align: center;
+	padding: 100px;
+}
+
+.about {
+
+	padding: 100px;
+	margin: 100px;
+
+
 }
 #logo {
 	display: block;
-	margin-left:auto;
+	margin-left: auto;
 	margin-right: auto;
 }
 
 .container-fluid {
 	background-color: #05386B;
-	color: #EDF5E1;
+	color: white;
 	padding: 100px;
 }
-/*#text {
-	display:inline-block;
 
-}*/
+.form-group label {
+	width: 120px;
+}
 
-a {
-  color: #00B7FF;
+.navbar p {
+	color: white;
+	font-weight: bold;
+}
+
+.navbar a {
+  color: white;
+  font-weight: normal;
 }
 
 <<<<<<< HEAD
