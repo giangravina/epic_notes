@@ -24,9 +24,7 @@ router.post('/login', function(req, res, next){
 			username: req.body.username,
 			password: hash
 		}
-
-		//res.redirect('/notes');
-	} else {
+} else {
 		res.render('login', {error: 'Invalid Username or  Password'})
 	}
 })
