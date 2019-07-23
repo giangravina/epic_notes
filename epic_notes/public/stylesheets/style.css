@@ -30,6 +30,9 @@ body {
 	background-color: #05386B;
 	color: white;
 	padding: 100px;
+	text-align: center;
+	align-items: center;
+	align-content: center;
 }
 
 .form-group label {
@@ -44,6 +47,10 @@ body {
 .navbar a {
   color: white;
   font-weight: normal;
+}
+
+#description {
+	color: white;
 }
 
 <<<<<<< HEAD
