@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Nunito", Helvetica, Arial, sans-serif;
 
 }
 
@@ -25,4 +25,10 @@ a {
 #save{
 	float: right;
 }
-
+nav ul li{
+	list-style: none;
+	display: inline;
+	font-size: 20px;
+	float: right;
+	padding: 0px 10px;
+}
