@@ -13,20 +13,28 @@
 <br>
 <br>
 
+  <div class="container">
+    <div class="row">
+      <div class = "col-sm-6">
 <div class="login">
 	<h4>Please Sign In</h4>
 
-	<form action="/login" method="post">
-		<label for="username">Email Address</label>
-		<input name="username" placeholder="Email Address" required autofocus>
-		<br>
-		<label for="password">Password</label>
-		<input name="password" placeholder="Password" type="password" required>
-		<br>
-
-		<button type="submit">Sign In</button>
-	</form>
-
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-text" placeholder="Email address">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-text" placeholder="Last Name">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
 </div>
 
 <br>
@@ -35,22 +43,30 @@
 
 <div>
 	<h4>If not a member yet, feel free to sign up!</h4>
+<div class = "col-sm-6">
+<form>
+  <div class="form-group">
+    <label for="firstname">First Name</label>
+    <input type="textarea" class="form-text" placeholder="First Name">
+        <label for="lastname">Last Name</label>
+    <input type="textarea" class="form-text" placeholder="Last Name">
+    <label for="email">Email address</label>
+    <input type="email" class="form-text" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-text" placeholder="Password">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</div>
+</div>
 
-	<form action="/signup" method="post">
-		<label for="firstName">First Name</label>
-		<input name="firstName" placeholder="First Name" required autofocus>
-		<br>
-		<label for="lastName">Last Name</label>
-		<input name="lastName" placeholder="Last Name" type="Last Name" required>
-		<br>
-		<label for="username">Email</label>
-		<input name="username" placeholder="Email Address" required autofocus>
-		<br>
-		<label for="password">Password</label>
-		<input name="password" type="password" placeholder="Password"required>
-		<br>
-		<button type="submit">Sign Up!</button>
-	</form>
 
 	<br>
 	<br>
@@ -59,41 +75,6 @@
 	<h4>About Epic Notes</h4>
 	<p>This app will allow the user to: Lorem ipsum dolor sit amet, eu sit wisi convenire, sed ei dolore appareat hendrerit, euripidis consequuntur ius ne. Urbanitas maiestatis cotidieque ne sed. Pri velit iisque et, tritani posidonium te pro. Ne vel bonorum eruditi. Dolor partiendo ut vel, iusto definitionem ne nam.
 </p>
-<br>
-<br>
-<br>
-
-
-<h3>List of Notes:</h3>
-
-<div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small>3 days ago</small>
-    </div>
-    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-    <small>Donec id elit non mi porta.</small>
-  </a>
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small class="text-muted">3 days ago</small>
-    </div>
-    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-    <small class="text-muted">Donec id elit non mi porta.</small>
-  </a>
-  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">List group item heading</h5>
-      <small class="text-muted">3 days ago</small>
-    </div>
-    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-    <small class="text-muted">Donec id elit non mi porta.</small>
-  </a>
-</div>
-
-</div>
 
 <br>
 <br>
