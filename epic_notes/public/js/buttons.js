@@ -16,11 +16,12 @@ $("#save").click(function (){
     //     //console.log($("#exampleFormControlTextarea1").val());--working
     // });
     var data = {
-                  title: $("#title").val(),
+                  //title: $("#title").val(),
                   note: $("#exampleFormControlTextarea1").val()
                 };
      $.post("/notes", data, function(){
-          console.log(data);
+          //console.log(data);
+          $("#groupNotes").html;
       });
    });
 
