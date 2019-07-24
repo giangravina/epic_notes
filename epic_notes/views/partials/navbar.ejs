@@ -9,14 +9,17 @@
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/login">Login</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="/notes">Notes</a>
       </li>
+      <% if(typeof currentUser == 'undefined') { %>
       <li class="nav-item">
-        <a class="nav-link" href="/logout" text-align: right;>Logout</a>
+        <a class="nav-link" href="/login">Login</a>
       </li>
+      <% } else { %>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout" style="align-items: right;">Logout</a>
+      </li>
+      <% } %>
     </ul>
   </div>
 </nav>

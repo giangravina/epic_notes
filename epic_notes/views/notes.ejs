@@ -32,7 +32,8 @@
           <!-- <label for="exampleFormControlTextarea1">Example textarea</label> -->
             <textarea class="form-control" name="ha" action="/notes" method="post" id="exampleFormControlTextarea1" rows="8"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" id="save">Save Edits</button>
+          <button type="submit" class="btn btn-primary" id="save">Save</button>
+          <button type="button" class="btn btn-primary" id="edit">Edit</button>
       </div>
 
     </div>
@@ -44,43 +45,3 @@
 
  -->
   
-
-
-
-  <!-- <script type="text/javascript">
-    // $("#save").click(function save(){
-    //   $.get('/notes', function(req, res, next){
-    //     console.log($("#exampleFormControlTextarea1").val());
-        
-    //     //res.render('/notes', $("#exampleFormControlTextarea1").val());
-    //   });
-    // });
-
-    // $.post('/notes', function (req, res, next) {
-    //   console.log('/')
-    // })
-    $("#save").click(function (){
-      
-      // $.get($("#exampleFormControlTextarea1").val(), function(req, res, next){
-      //   console.log($("#exampleFormControlTextarea1").val());
-      //   //alert($("#exampleFormControlTextarea1").val());
-      // });
-      // $.post($("#exampleFormControlTextarea1").val(), data, function(req, res, next){
-      //     var data = $.get($("#exampleFormControlTextarea1").val());
-      //     console.log(data);
-      // });
-    //   $.get("/notes", function(req, res, next){
-    //     var r = $("#exampleFormControlTextarea1").val();
-    //     console.log(r);
-    //   })
-    //     //console.log($("#exampleFormControlTextarea1").val());--working
-    // });
-    var data = {
-                  note: $("#exampleFormControlTextarea1").val()
-                };
-     $.post("/notes", data, function(){
-          console.log(data);
-      });
-   });
-  </script>
- -->
