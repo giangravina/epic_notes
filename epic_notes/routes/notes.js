@@ -7,21 +7,11 @@ router.get('/', function(req, res, next){
 	res.render('notes', {title: 'Epic Notes'});
 });
 
-router.get('/notes', function(req, res, next) {
-	// var n = [
-	// 	{title: "Music Dreams", note: "I love the stars"},
-	// 	{title: "To-Do List", note: "I must place the cat on the log"},
-	// 	{title: "Homework", note: "Math is lame, but trig must be done..."}
-	// 	]
-	var data = {note: $.get("#exampleFormControlTextarea1").val()};
-	$("#exampleFormControlTextarea1").val();
-	res.render('/notes');
-});
 
-router.post('/notes', function (req, res, next) {
+router.post('/', function (req, res, next) {
 
-      $("#exampleFormControlTextarea1").val();
-	res.render('/notes');
+      //$("#exampleFormControlTextarea1").val();
+	res.send('success!');
 });
     
    

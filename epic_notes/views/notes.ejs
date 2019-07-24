@@ -13,13 +13,13 @@
     <div class="row">
        <div class="col-sm-3">
          	<div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action active">
+            <a href="#0" class="list-group-item list-group-item-action active">
               Music Dreams
             </a>
-            <a href="#" class="list-group-item list-group-item-action">To-Do List</a>
-            <a href="#" class="list-group-item list-group-item-action">Homework</a>
-            <a href="#" class="list-group-item list-group-item-action">Groceries</a>
-            <a href="#" class="list-group-item list-group-item-action" >Game cheats</a>
+            <a href="#1" class="list-group-item list-group-item-action">To-Do List</a>
+            <a href="#3" class="list-group-item list-group-item-action">Homework</a>
+            <a href="#4" class="list-group-item list-group-item-action">Groceries</a>
+            <a href="#5" class="list-group-item list-group-item-action" >Game cheats</a>
           </div><br>
           <div class="zeb">
             <button type="button" class="btn btn-primary" id="addNew">Add New</button>
@@ -30,7 +30,7 @@
       <div class="col-sm-7">
       	  <div class="form-group" id = "text">
           <!-- <label for="exampleFormControlTextarea1">Example textarea</label> -->
-            <textarea class="form-control" action="/notes" method="post" id="exampleFormControlTextarea1" rows="8"></textarea>
+            <textarea class="form-control" name="ha" action="/notes" method="post" id="exampleFormControlTextarea1" rows="8"></textarea>
           </div>
           <button type="submit" class="btn btn-primary" id="save">Save Edits</button>
       </div>
@@ -43,9 +43,11 @@
    $.post('url', data, callback( ) )
 
  -->
-  <script
-  src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script type="text/javascript">
+  
+
+
+
+  <!-- <script type="text/javascript">
     // $("#save").click(function save(){
     //   $.get('/notes', function(req, res, next){
     //     console.log($("#exampleFormControlTextarea1").val());
@@ -57,21 +59,28 @@
     // $.post('/notes', function (req, res, next) {
     //   console.log('/')
     // })
-    // var data = {
-    //    note: $("#exampleFormControlTextarea1").val()
-    //  };
-    // $.post("/route", data, function(){
-
-    //  })
-
-    $("#save").click(function save(){
-      $.get($("#exampleFormControlTextarea1").val(), function(req, res, next){
-        console.log($("#exampleFormControlTextarea1").val());
-        //alert($("#exampleFormControlTextarea1").val());
-      });
-      $.post($("#exampleFormControlTextarea1").val(), data, function(req, res, next){
-          var data = $.get($("#exampleFormControlTextarea1").val());
+    $("#save").click(function (){
+      
+      // $.get($("#exampleFormControlTextarea1").val(), function(req, res, next){
+      //   console.log($("#exampleFormControlTextarea1").val());
+      //   //alert($("#exampleFormControlTextarea1").val());
+      // });
+      // $.post($("#exampleFormControlTextarea1").val(), data, function(req, res, next){
+      //     var data = $.get($("#exampleFormControlTextarea1").val());
+      //     console.log(data);
+      // });
+    //   $.get("/notes", function(req, res, next){
+    //     var r = $("#exampleFormControlTextarea1").val();
+    //     console.log(r);
+    //   })
+    //     //console.log($("#exampleFormControlTextarea1").val());--working
+    // });
+    var data = {
+                  note: $("#exampleFormControlTextarea1").val()
+                };
+     $.post("/notes", data, function(){
           console.log(data);
-      })
-    });
+      });
+   });
   </script>
+ -->
