@@ -1,4 +1,5 @@
 <% layout('/layout') %>
+<% block('title', 'Notes App') %>
   <div>
     <h2>Please Sign In</h2>
       <% if(error) { %>
@@ -8,7 +9,7 @@
         <label for="username">Email Address</label>
         <input name='username' placeholder='Email Address' required autofocus>
         <label for="password">Password</label>
-        <input type="password" name="namepassword" required>
+        <input type="password" name="password" required>
         <button type="submit">Sign In</button>
       </form>
   </div>

@@ -9,13 +9,18 @@
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/login">Login</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="/notes">Notes</a>
       </li>
+<<<<<<< HEAD
       <li class="nav-item">
         <a class="nav-link" href="/logout" text-align: right;>Logout</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+=======
+      <li class="nav-item" id="logout-button">
+        <a class="nav-link" href="/logout";>Logout</a>
+>>>>>>> 92d766fae47aeee60acd40ccd4e6d853e99b9fb1
       </li>
     </ul>
   </div>

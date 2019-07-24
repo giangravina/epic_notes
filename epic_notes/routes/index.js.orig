@@ -1,13 +1,38 @@
 var express = require('express');
 var router = express.Router();
+var crypto = require('crypto');
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-<<<<<<< HEAD
   res.render('index', { title: 'Epic Notes', header: 'Welcome to our page!' });
-=======
-  res.render('index', { title: 'EpicNotes' });
->>>>>>> 25564bf136796b813615bfaadfd0a285fcad81db
 });
+
+
+router.get('/login', function(req, res, next){
+	res.render('login', {error: null});
+});
+
+router.post('/login', function(req, res, next){
+	if(req.body.username && req.body.password){
+		var data = req.body.password;
+		var hash = crypto.createHash('sha256').update(data).digest('hex');
+
+		console.log('hash', hash);
+
+		req.session.authentication = {
+			username: req.body.username,
+			password: hash
+		}
+
+<<<<<<< HEAD
+		//res.redirect('/notes');
+=======
+		res.redirect('/login');
+>>>>>>> 93c745d51f3edbb810700efd26d9f713d89c05cc
+	} else {
+		res.render('login', {error: 'Invalid Username or  Password'})
+	}
+})
 
 module.exports = router;

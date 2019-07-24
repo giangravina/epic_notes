@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var crypto = require('crypto');
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -23,7 +25,7 @@ router.post('/login', function(req, res, next){
 			password: hash
 		}
 
-		res.redirect('/');
+		res.redirect('/notes');
 	} else {
 		res.render('login', {error: 'Invalid Username or  Password'})
 	}
