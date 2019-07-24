@@ -1,12 +1,12 @@
-///From lucia-gm feat: Meta tag description on GITHUB
+///From lucia-gm feat: Meta tag description on GITHUB link: codecademy.com/learn/make-a-website
 
 // Form reference
 const form = {}
-form.noteText = document.querySelector('#formNoteText');
-form.addButton = document.querySelector('#formAddButton');
-form.color = document.querySelector('#formColor');
+form.noteText = document.querySelector('#exampleFormControlTextarea1');
+form.addButton = document.querySelector('#addNew');
+//form.color = document.querySelector('#formColor');
 
-const notes = document.querySelector('#notes');
+const notes = document.querySelector('#groupNotes');
 
 form.noteText.focus();
 
@@ -17,7 +17,7 @@ function addNote() {
   let deleteButton = document.createElement('span');
 
   note.classList.add('note');
-  note.classList.add(form.color.value);
+  //note.classList.add(form.color.value);
   note.innerHTML = `<div class='note-text'>${text}</div>`;
   deleteButton.classList.add('note-delete');
   deleteButton.innerHTML = '&times;';

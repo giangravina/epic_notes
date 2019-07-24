@@ -1,5 +1,4 @@
 
-
 $("#save").click(function (){
       
       // $.get($("#exampleFormControlTextarea1").val(), function(req, res, next){
@@ -32,7 +31,7 @@ $("#edit").click(function(){
 $("#del").click(function(){
   function deleteNote(e) {
   let eventNote = e.target.parentNode;
-  eventNote.parentNode.removeChild(console.log());
+  eventNote.parentNode.removeChild(eventNote);
 }
 });
 
