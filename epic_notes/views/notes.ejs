@@ -30,8 +30,7 @@
       <div class="col-sm-7">
       	  <div class="form-group" id = "text">
           <!-- <label for="exampleFormControlTextarea1">Example textarea</label> -->
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="8">One day I will get a guitar that looks like a skull.
-            Then I will play at the giant theatre at the house.</textarea>
+            <textarea class="form-control" action="/notes" method="post" id="exampleFormControlTextarea1" rows="8"></textarea>
           </div>
           <button type="submit" class="btn btn-primary" id="save">Save Edits</button>
       </div>
@@ -43,22 +42,21 @@
    $.get('url', callback( ) ) :makes backend router listen for the frontend
    $.post('url', data, callback( ) )
 
- backend: listen for command request
-   router.get('/route', callback( ) )
-   router.post('url', callback( ) ) -->
+ -->
   <script
   src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script type="text/javascript">
-    $("#save").click(function save(){
-      $.get('/Notes', function(req, res, next){
-        console.log($("#exampleFormControlTextarea1").val());
+    // $("#save").click(function save(){
+    //   $.get('/notes', function(req, res, next){
+    //     console.log($("#exampleFormControlTextarea1").val());
+        
+    //     //res.render('/notes', $("#exampleFormControlTextarea1").val());
+    //   });
+    // });
 
-      });
-    });
-
-    $.post('/Notes', function (req, res, next) {
-      ''
-    })
+    // $.post('/notes', function (req, res, next) {
+    //   console.log('/')
+    // })
     // var data = {
     //    note: $("#exampleFormControlTextarea1").val()
     //  };
@@ -66,10 +64,14 @@
 
     //  })
 
-    // $("#save").click(function save(){
-    //   var n = $.get("#exampleFormControlTextarea1", function(n){
-    //     //console.log($("#exampleFormControlTextarea1").val());
-    //     alert($("#exampleFormControlTextarea1").val());
-    //   })
-    // });
+    $("#save").click(function save(){
+      $.get($("#exampleFormControlTextarea1").val(), function(req, res, next){
+        console.log($("#exampleFormControlTextarea1").val());
+        //alert($("#exampleFormControlTextarea1").val());
+      });
+      $.post($("#exampleFormControlTextarea1").val(), data, function(req, res, next){
+          var data = $.get($("#exampleFormControlTextarea1").val());
+          console.log(data);
+      })
+    });
   </script>
