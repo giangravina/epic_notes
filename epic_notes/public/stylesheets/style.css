@@ -91,6 +91,11 @@ align-items: : left;
 	border-color: #05386B;
 }
 
+.btn.btn-dark {
+	background-color: black;
+	border-color: black;
+}
+
 #logged-in-as {
 	margin-left: 20px;
 	padding-top: 10px;
