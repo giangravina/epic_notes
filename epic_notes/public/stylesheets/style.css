@@ -91,13 +91,19 @@ align-items: : left;
 	border-color: #05386B;
 }
 
+.btn.btn-dark {
+	background-color: black;
+	border-color: black;
+}
+
 #logged-in-as {
 	margin-left: 20px;
 	padding-top: 10px;
 }
 
-.list-group-item-action .active {
+.list-group-item.active {
 	background-color: #05386B;
+	border-color: #05386B;
 }
 
 footer {
