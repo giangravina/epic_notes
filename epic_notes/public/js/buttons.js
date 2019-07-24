@@ -15,6 +15,7 @@ $("#save").click(function (){
     //     //console.log($("#exampleFormControlTextarea1").val());--working
     // });
     var data = {
+                  title: $("#title").val(),
                   note: $("#exampleFormControlTextarea1").val()
                 };
      $.post("/notes", data, function(){
@@ -22,14 +23,14 @@ $("#save").click(function (){
       });
    });
 
-$("#edit").click(function()){
+$("#edit").click(function(){
+    $("#save").hide();
+});
 
-};
+$("#del").click(function(){
+    req.session.destroy(data);
+});
 
-$("#del").click(function()){
+$("#addNew").click(function(){
 
-};
-
-$("#addNew").click(function()){
-
-};
+});
