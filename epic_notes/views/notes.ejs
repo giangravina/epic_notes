@@ -16,7 +16,7 @@
             <a href="#0" class="list-group-item list-group-item-action active">
               Music Dreams
             </a>
-            <a href="#1" class="list-group-item list-group-item-action">To-Do List</a>
+            <a href="#1" class="list-group-item list-group-item-action"><%- title -%> To-Do List</a>
             <a href="#3" class="list-group-item list-group-item-action">Homework</a>
             <a href="#4" class="list-group-item list-group-item-action">Groceries</a>
             <a href="#5" class="list-group-item list-group-item-action" >Game cheats</a>
@@ -28,9 +28,10 @@
         </div>
 
       <div class="col-sm-7">
+          <input class="form-control" type="text" placeholder="Title"><br>
       	  <div class="form-group" id = "text">
           <!-- <label for="exampleFormControlTextarea1">Example textarea</label> -->
-            <textarea class="form-control" name="ha" action="/notes" method="post" id="exampleFormControlTextarea1" rows="8"></textarea>
+            <textarea class="form-control" name="ha" action="/notes" method="post" id="exampleFormControlTextarea1" rows="7"></textarea>
           </div>
           <button type="submit" class="btn btn-primary" id="save">Save</button>
           <button type="button" class="btn btn-primary" id="edit">Edit</button>

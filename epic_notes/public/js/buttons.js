@@ -21,3 +21,15 @@ $("#save").click(function (){
           console.log(data);
       });
    });
+
+$("#edit").click(function()){
+
+};
+
+$("#del").click(function()){
+
+};
+
+$("#addNew").click(function()){
+
+};
