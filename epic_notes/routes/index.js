@@ -29,6 +29,14 @@ router.post('/login', function(req, res, next){
 	} else {
 		res.render('login', {error: 'Invalid Username or  Password'})
 	}
+})
+
+router.get('/logout', function(req, res, next){
+	req.session.destroy(function(){;
+	res.redirect('/');
 });
+
+})
+
 
 module.exports = router;

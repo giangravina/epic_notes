@@ -24,13 +24,13 @@ router.post('/login', function(req, res, next){
 			username: req.body.username,
 			password: hash
 		}
-
 <<<<<<< HEAD
-		//res.redirect('/notes');
-=======
-		res.redirect('/login');
->>>>>>> 93c745d51f3edbb810700efd26d9f713d89c05cc
+
+		res.redirect('/notes');
 	} else {
+=======
+} else {
+>>>>>>> 848ba5edc8689f465f2084723434bd335fdcf267
 		res.render('login', {error: 'Invalid Username or  Password'})
 	}
 })
