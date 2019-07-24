@@ -2,15 +2,15 @@
 <html>
 <head>
 	<title><%= blocks.title %></title>
-	<% if (typeof currentUser !== 'undefined') { %>
-  <p> Logged In As: <%= currentUser.username %></p>
-<% } %>
 	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 	<link rel = "stylesheet" href = "/stylesheets/style.css">
 </head>
 <body>
 	<%- partial('partials/navbar') -%>
+		<% if (typeof currentUser !== 'undefined') { %>
+  <p id="logged-in-as"> Logged In As: <%= currentUser.username %></p>
+<% } %>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">

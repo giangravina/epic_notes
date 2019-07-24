@@ -4,7 +4,7 @@ var router = express.Router();
 //    router.get('/route', callback( ) )
 //    router.post('url', callback( ) ) 
 router.get('/', function(req, res, next){
-	res.render('notes', {title: 'EpicNotes'});
+	res.render('notes', {title: 'Epic Notes'});
 });
 
 router.get('/notes', function(req, res, next) {

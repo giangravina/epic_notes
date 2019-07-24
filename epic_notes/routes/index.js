@@ -29,6 +29,6 @@ router.post('/login', function(req, res, next){
 	} else {
 		res.render('login', {error: 'Invalid Username or  Password'})
 	}
-})
+});
 
 module.exports = router;
