@@ -36,9 +36,17 @@ body {
 	align-content: center;
 }
 
-#sign-in {
+.sign-in {
 	padding: 100px;
 	text-align: center;
+}
+
+#contact-us {
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
 }
 .form-group label {
 	width: 120px;
