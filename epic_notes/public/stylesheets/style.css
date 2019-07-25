@@ -125,13 +125,16 @@ footer {
 
 select
 {
-	height: 200px!important;
+	height: 200px;
 }
 
 #noteDisplay{
+	margin-top: 40px;
 	padding: 20px;
+	width: 500px;
 	border: 1px solid blue;
-	background-color: orange;
+	background-color: #05386B;
+	color: white;
 	border-radius: 5px;
 }
 #del{

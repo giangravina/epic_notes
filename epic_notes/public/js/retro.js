@@ -40,7 +40,7 @@ function init() {
 function writeNote(){
 	document.getElementById('read').style.display = "none";	
 	document.getElementById('write').style.display = "block";
-	document.getElementById('title').value = "";  //noteTitle
+	document.getElementById('mew').value = "";  //noteTitle
 	document.getElementById('exampleFormControlTextarea1').value = ""; // noteBody
 
 }
@@ -69,7 +69,7 @@ function displayNote(note){
 
 save.onclick = function(){ //btnSave
 	const noteDate = new Date();
-	const noteTitle = document.getElementById('title').value; //noteTitle
+	const noteTitle = document.getElementById('mew').value; //noteTitle
 	const noteBody = document.getElementById('exampleFormControlTextarea1').value; //noteBody
 	const theNote = new Note(noteDate, noteTitle, noteBody);
 	saveNotes(theNote);
