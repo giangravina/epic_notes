@@ -136,7 +136,15 @@ select
 	background-color: #05386B;
 	color: white;
 	border-radius: 5px;
+
 }
+#noteDisplay input[type = text]{
+	display: none;
+}
+#noteDisplay.editing input[ type = text]{
+	display: block;
+}
+
 #del{
 	float: right;
 }

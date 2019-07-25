@@ -17,7 +17,7 @@ function init() {
 			out += "<option value=" +x + ">";
 			out += noteArray[x].title;
 			out += "</option>";
-			document.getElementById('noteMaster').innerHTML = out; 
+			document.getElementById('noteMaster').innerHTML = out;
 		}	
 
 
@@ -30,6 +30,7 @@ function init() {
 
 			document.getElementById('noteMaster').addEventListener('click', function(e){ 
 				displayNote(e.target.value); //double check displayNote
+
 			});
 
 			readNotes();
@@ -52,10 +53,11 @@ function readNotes(){
 function displayNote(note){
 	let noteArray =
 	JSON.parse(localStorage.getItem('noteData'));
-	let out = "<h2>" + noteArray[note].title + "</h2>";
-	out += "<h4>Date: " + new
+	let out = "<h2>" + noteArray[note].title + "</h2>" + '<input value="' + noteArray[note].title + '" type="text">' + '"id="title-edit"';
+	out += "<h4>Date: " + new 
 	Date(noteArray[note].date).toDateString() + "</h4>";
-	out += "<p>" + noteArray[note].body + "</p>";
+	out += "<p>" + noteArray[note].body + "</p>" + '<input value="' + noteArray[note].body + '" type="text">' + '"id="body-edit"';
+	out += "<button type='button' class='btn btn-primary' id='edit'style= 'margin: 28px'>Edit</button>"
 	out += "<button type='button' class='btn btn-primary' id='del' style='margin: 28px'>Delete</button>"
 
 	document.getElementById('noteDisplay').innerHTML = out;
@@ -65,7 +67,16 @@ function displayNote(note){
 		localStorage.setItem('noteData', JSON.stringify(noteArray));
 		init();
 	}
+	document.getElementById('edit').onclick =function(){ 
+		
+		document.querySelector("title-edit").classList.toggle("editing");
+		document.querySelector("body-edit").classList.toggle("editing");
+		
+	}
 }
+  // document.querySelector("select option[selected]").forEach(function(){
+ 	// 	displayNote(this.innerText)
+	 //  });
 
 save.onclick = function(){ //btnSave
 	const noteDate = new Date();
