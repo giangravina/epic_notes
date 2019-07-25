@@ -53,10 +53,10 @@ function readNotes(){
 function displayNote(note){
 	let noteArray =
 	JSON.parse(localStorage.getItem('noteData'));
-	let out = "<h2>" + noteArray[note].title + "</h2>" + '<input value="' + noteArray[note].title + '" type="text">' + '"id="title-edit"';
+	let out = '<h2 id="title2">' + noteArray[note].title + "</h2>" + '<input value="' + noteArray[note].title + '" type="text"' + '" id="title-edit">';
 	out += "<h4>Date: " + new 
 	Date(noteArray[note].date).toDateString() + "</h4>";
-	out += "<p>" + noteArray[note].body + "</p>" + '<input value="' + noteArray[note].body + '" type="text">' + '"id="body-edit"';
+	out += '<p id="body2">' + noteArray[note].body + "</p>" + '<input value="' + noteArray[note].body + '" type="text"' + '" id="body-edit">';
 	out += "<button type='button' class='btn btn-primary' id='edit'style= 'margin: 28px'>Edit</button>"
 	out += "<button type='button' class='btn btn-primary' id='del' style='margin: 28px'>Delete</button>"
 
@@ -69,8 +69,27 @@ function displayNote(note){
 	}
 	document.getElementById('edit').onclick =function(){ 
 		
-		document.querySelector("title-edit").classList.toggle("editing");
-		document.querySelector("body-edit").classList.toggle("editing");
+		if (document.querySelector("#noteDisplay").classList.contains("editing")) {
+				document.querySelector("#noteDisplay").classList.remove("editing")
+				var options = document.querySelectorAll("option");
+				console.log('options', options)
+
+				var index = document.getElementById("noteMaster").selectedIndex;
+				
+
+				console.log('index', index);
+				var editArray = JSON.parse(localStorage.getItem("noteData"));
+
+				editArray[index].title = document.getElementById("title-edit").value;
+				editArray[index].body = document.getElementById("body-edit").value;
+				localStorage.setItem("noteData", JSON.stringify("editArray"));
+				document.getElementById("title2").innerHTML = editArray[index].title;
+				document.getElementById("body2").innerHTML = editArray[index].body;
+								
+		}else{
+				document.querySelector("#noteDisplay").classList.add("editing")
+		}
+		// document.querySelector("body-edit").classList.toggle("editing");
 		
 	}
 }
