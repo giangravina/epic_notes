@@ -56,7 +56,7 @@ function displayNote(note){
 	out += "<h4>Date: " + new
 	Date(noteArray[note].date).toDateString() + "</h4>";
 	out += "<p>" + noteArray[note].body + "</p>";
-	out += "<button type='button' class='btn btn-primary' id='del'>Delete</button>"
+	out += "<button type='button' class='btn btn-primary' id='del' style='margin: 28px'>Delete</button>"
 
 	document.getElementById('noteDisplay').innerHTML = out;
 

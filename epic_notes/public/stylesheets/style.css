@@ -143,6 +143,10 @@ select
 #save{
 	float: right;
 }
+
+.btn {
+	margin: 8px;
+}
 nav ul li{
 	list-style: none;
 	display: inline;
