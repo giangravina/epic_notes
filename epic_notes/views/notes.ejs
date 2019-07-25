@@ -12,15 +12,7 @@
   <div class="container">
     <div class="row">
        <div class="col-sm-3">
-         	<!-- <div class="list-group">
-            <a href="#0" class="list-group-item list-group-item-action active">
-              Music Dreams
-            </a>
-            <a href="#1" class="list-group-item list-group-item-action"><%- title -%> To-Do List</a>
-            <a href="#3" class="list-group-item list-group-item-action">Homework</a>
-            <a href="#4" class="list-group-item list-group-item-action">Groceries</a>
-            <a href="#5" class="list-group-item list-group-item-action" >Game cheats</a>
-          </div><br> -->
+         
           <div class="zeb">
             <button type="button" class="btn btn-primary" id="addNew">Add New</button>
             <button type="button" class="btn btn-primary" id="del">Delete</button>
@@ -28,12 +20,26 @@
         </div>
 
       <div class="col-sm-7">
-          <input class="form-control" type="text" placeholder="Title" id="title"><br>
+          <!-- <input class="form-control" type="text" placeholder="Title" id="title"><br>
       	  <div class="form-group" id = "text">
-          <!-- <label for="exampleFormControlTextarea1">Example textarea</label> -->
-            <textarea class="form-control" name="ha" action="/notes" method="post" id="exampleFormControlTextarea1" rows="7"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" id="save">Save</button>
+          <label for="exampleFormControlTextarea1">Example textarea</label> -->
+           <!--  <textarea class="form-control" name="ha" action="/notes" method="post" id="exampleFormControlTextarea1" rows="7"></textarea>
+          </div> -->
+          <!-- vFramework Television link: https://www.youtube.com/watch?v=ZrbG-48lFOg -->
+              <h1>Notes</h1>
+              <div id="write">
+                <label for="title">Title</label><br>
+                <input type="text" name="ha" id="title"><br>
+                <label for="exampleFormControlTextarea1">Note</label>
+                <textarea id="exampleFormControlTextarea1"></textarea>
+                <button type="submit" class="btn btn-primary" id="save">Save</button>
+              </div>
+              <div id="read">
+                <button type="button" class="btn btn-primary" id="addNew">Add New</button>
+                <select size="10" id="noteMaster"></select>
+                <div id="noteDisplay"></div>
+              </div>
+           
           <button type="button" class="btn btn-primary" id="edit">Edit</button>
       </div>
 
@@ -41,17 +47,7 @@
   </div>
 
     <div id="groupNotes"></div>
-<!-- ///From lucia-gm feat: Meta tag description on GITHUB link: codecademy.com/learn/make-a-website -->
 
-<!--   <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <button type="submit" class="btn btn-primary" id="save">Save</button>
-    <button type="button" class="btn btn-primary" id="edit">Edit</button>
-  </div>
-</div> -->
 <!-- front end: executes
    get and post
    $.get('url', callback( ) ) :makes backend router listen for the frontend
