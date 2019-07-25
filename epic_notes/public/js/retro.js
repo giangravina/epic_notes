@@ -15,7 +15,7 @@ function init() {
 		for(let x = 0; x < noteArray.length; x++)
 		{
 			out += "<option value=" +x + ">";
-			out += noteArray[0].title;
+			out += noteArray[x].title;
 			out += "</option>";
 			document.getElementById('noteMaster').innerHTML = out; 
 		}	
