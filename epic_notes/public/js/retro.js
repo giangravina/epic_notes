@@ -82,7 +82,7 @@ function displayNote(note){
 
 				editArray[index].title = document.getElementById("title-edit").value;
 				editArray[index].body = document.getElementById("body-edit").value;
-				localStorage.setItem("noteData", JSON.stringify("editArray"));
+				localStorage.setItem("noteData", JSON.stringify(editArray));
 				document.getElementById("title2").innerHTML = editArray[index].title;
 				document.getElementById("body2").innerHTML = editArray[index].body;
 								
